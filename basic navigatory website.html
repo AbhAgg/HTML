@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation Bar</title>
+	<style>
+		body{
+			margin: 0px;
+			font-family: sans-serif;
+		}
+		html{
+			scroll-behavior: smooth;
+		}
+
+		.nav{
+			width: 100%;
+			background-color: lightblue;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			box-shadow: 5px 5px 10px lightgrey;
+			position: fixed;
+		}
+
+		a{
+			text-decoration: none;
+			color:darkblue;
+			font-size:25px;
+			padding: 20px;
+		}
+
+		a:hover{
+			background-color: darkblue;
+			color:lightblue;
+		}
+
+
+
+		.home{
+			width:100%;
+			height:800px;
+			background-color: crimson;
+			text-align:center;
+			padding-top:100px;
+			box-sizing: border-box;
+		}
+		.about{
+			width:100%;
+			height:800px;
+			background-color:peachpuff;
+			text-align:center;
+			padding-top: 200px;
+			box-sizing: border-box;
+		}
+		.service{
+			width:100%;
+			height:800px;
+			background-color:green;
+			text-align:center;
+			padding-top: 200px;
+			box-sizing: border-box;
+		}
+		.contact{
+			width:100%;
+			height:800px;
+			background-color:yellow;
+			text-align:center;
+			padding-top: 200px;
+			box-sizing: border-box;
+		}
+
+
+		.input{
+			width:300px;
+			padding: 15px;
+			border-radius: 10px;
+			outline:none;
+			border:none;
+			font-size:20px;
+		}
+		.input::placeholder{
+			font-size:20px;
+		}
+		.input:focus{
+			background-color: black;
+			color:white;
+			border:1px solid white;
+		}
+		.dropdown{
+			display: inline-block;
+			position: relative;
+		}
+		.content a{
+			display: block;
+
+		}
+		.content{
+			position: absolute;
+			width:300px;
+			background-color: dodgerblue;
+			display: none;
+		}
+		.dropdown:hover .content{
+			display: block;
+		}
+		
+	</style>
+</head>
+
+
+
+<body>
+
+<div class="nav">
+<a href="#home">Home</a>
+<a href="#ab">About Us</a>
+<a href="#contact">Contact</a>
+<a href="#service">Services</a>
+<div class="dropdown">
+<a href="#">Dropdown</a>
+<div class="content">
+<a href="#">Link</a>
+<a href="#">Link</a>
+<a href="#">Link</a>
+
+	</div>
+</div>
+</div>
+<div class="home" id="home">
+	Home
+<center><table>
+<form>
+<tr><td>Name</td><td><input type="text" placeholder="Name" class="input"></td></tr>
+<tr><td>Email</td><td><input type="email" placeholder="Email"></td></tr>
+<tr><td><input type="reset"></td><td><input type="submit"></td></tr>
+
+</form></table></center>
+</div>
+
+<div class="about" id="ab">About</div>
+
+<div class="contact" id="contact">Contact</div>
+
+<div class="service" id="service">Service</div>
+
+</body>
+</html>
